@@ -10,26 +10,59 @@ Create a Python script that fetches and displays AWS EKS cluster status and deta
 * IntelliJ-PyCharm: IDE used for development.
 * AWS: Cloud provider.
 * Boto3 AWS SDK for Python.
+* Terraform
 
 # 🎯 Features
 ✅ Retrieves EKS cluster details
 📡 Displays cluster configuration and status
 
-
 # Prerequisites
 * AWS account
 * Python and PyCharm installed.
+* Terraform EKS demo.
   
 # 🏗 Project Architecture
 
 # ⚙️ Project Configuration
    
 ## Adding Tags to EC2 Instances
-1. Add instances in Paris and Frankfurt in the AWS console.
+1. Deploy the EKS infrastructure using Terraform from the demo in the Terraform section.
    
 2. Import boto3 module.
    ```bash
    import boto3
    ```
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/2.PNG" width=800 />
+   
+3. Initialize EKS client
+   ```bash
+   eks_client = boto3.client('eks', region_name = "us-east-2")   
+   ```
+   <img src="" width=800 />
+   
+4. List Available EKS Clusters
+   ```bash
+      #List Clusters
+      available_clusters = eks_client.list_clusters()
+      eks_clusters = available_clusters["clusters"]
+   ```
+   <img src="" width=800 />
+   
+5. Get details about the cluster and print them
+   ```bash
+       for eks_cluster in eks_clusters:
+    
+          #Getting details about the cluster
+          cluster_details = eks_client.describe_cluster(
+              name = eks_cluster
+          )
+          cluster_info = cluster_details["cluster"]
+          cluster_status = cluster_info["status"]
+          cluster_endpoint = cluster_info["endpoint"]
+          cluster_version = cluster_info["version"]
+      
+          print(f"Cluster: {eks_cluster} status is {cluster_status}\nThe Cluster endpoint is: {cluster_endpoint}\nThe Cluster K8 version is: {cluster_version}")
+
+   ```
+   <img src="" width=800 />
    
