@@ -66,8 +66,7 @@ Create a Python script that fetches and displays AWS EKS cluster status and deta
    ```
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_3/blob/main/Img/3.PNG" width=800 />
    
-
-   5. Outputs:
+5. Outputs:
         
       <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_3/blob/main/Img/5%20getting%20endpoint%20and%20version.png" width=800 />
       
