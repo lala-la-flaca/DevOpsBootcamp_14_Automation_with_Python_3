@@ -38,7 +38,7 @@ Create a Python script that fetches and displays AWS EKS cluster status and deta
    ```bash
    eks_client = boto3.client('eks', region_name = "us-east-2")   
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_3/blob/main/Img/2.PNG" width=800 />
    
 4. List Available EKS Clusters
    ```bash
@@ -46,7 +46,7 @@ Create a Python script that fetches and displays AWS EKS cluster status and deta
       available_clusters = eks_client.list_clusters()
       eks_clusters = available_clusters["clusters"]
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_3/blob/main/Img/3.PNG" width=800 />
    
 5. Get details about the cluster and print them
    ```bash
@@ -64,5 +64,10 @@ Create a Python script that fetches and displays AWS EKS cluster status and deta
           print(f"Cluster: {eks_cluster} status is {cluster_status}\nThe Cluster endpoint is: {cluster_endpoint}\nThe Cluster K8 version is: {cluster_version}")
 
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_3/blob/main/Img/4.PNG" width=800 />
+
+   5. Outputs:
+      <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_3/blob/main/Img/4%20name%20and%20status.png" width=800 />
+      <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_3/blob/main/Img/5%20getting%20endpoint%20and%20version.png" width=800 />
+      
    
