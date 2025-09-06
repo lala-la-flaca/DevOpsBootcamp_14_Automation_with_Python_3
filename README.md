@@ -46,7 +46,7 @@ Create a Python script that fetches and displays AWS EKS cluster status and deta
       available_clusters = eks_client.list_clusters()
       eks_clusters = available_clusters["clusters"]
    ```
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_3/blob/main/Img/3.PNG" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_3/blob/main/Img/4.PNG" width=800 />
    
 5. Get details about the cluster and print them
    ```bash
@@ -64,7 +64,7 @@ Create a Python script that fetches and displays AWS EKS cluster status and deta
           print(f"Cluster: {eks_cluster} status is {cluster_status}\nThe Cluster endpoint is: {cluster_endpoint}\nThe Cluster K8 version is: {cluster_version}")
 
    ```
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_3/blob/main/Img/4.PNG" width=800 />
+   
 
    5. Outputs:
       <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_3/blob/main/Img/4%20name%20and%20status.png" width=800 />
